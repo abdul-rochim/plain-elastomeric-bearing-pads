@@ -117,7 +117,7 @@ file_pep.writelines(["stress_s = DL/ (LW) = {0:0.2f}".format(stress_s), " ksi\n"
 if stress_s <= 1. * G * Si :
     file_pep.writelines(["Check, stress_s <= 1.00 GSi,  {0:0.2f}".format(stress_s), " ksi  <  {0:0.2f}".format(1.0 * G * Si), " ksi   [ OK ]\n"])
 else :
-    file_pep.writelines(["Check, stress_s > 1.00 G Si or stress_s   [ OK ]\n\n"])
+    file_pep.writelines(["Check, stress_s > 1.00 G Si   [ OK ]\n\n"])
 
 if stress_s <= 0.80 :
     file_pep.writelines(["Check, stress_s <= 0.80 ksi,  {0:0.2f}".format(stress_s), " ksi  <  {0:0.2f}".format(0.80), " ksi   [ OK ]\n\n"])
