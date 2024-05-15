@@ -133,9 +133,9 @@ file_pep.writelines(["   epsilon_d = {0:0.3f}\n".format(epsilon_d)])
 file_pep.writelines(["   dho_d = sigma(epsilon_d * hri)\n"])
 file_pep.writelines(["   dho_d = {0:0.3f}".format(dho_d), " mm\n"])
 if dho_d < dho_d_req:
-    file_pep.writelines(["   dho_d = {0:0.3f}".format(dho_d), " in  <  {0:0.3f}".format(dho_d_req), " mm  [ OK ]\n\n"]) 
+    file_pep.writelines(["   dho_d = {0:0.3f}".format(dho_d), " mm  <  {0:0.3f}".format(dho_d_req), " mm  [ OK ]\n\n"]) 
 else:
-    file_pep.writelines(["   dho_d = {0:0.3f}".format(dho_d), " in  >  {0:0.3f}".format(dho_d_req), " mm  [ NOT OK ]\n\n"]) 
+    file_pep.writelines(["   dho_d = {0:0.3f}".format(dho_d), " mm  >  {0:0.3f}".format(dho_d_req), " mm  [ NOT OK ]\n\n"]) 
 
 file_pep.writelines(["4. Stability\n"])
 file_pep.writelines(["   Total thickness of interior, hri, is equal to total elastomer thickness, hrt (hri = hrt)\n"])
@@ -145,9 +145,9 @@ file_pep.writelines(["   W/3 = {0:0.2f}".format(W_req), " mm\n"])
 file_pep.writelines(["   lesser between L/3 and W/3 = {0:0.2f}".format(min_req_L_and_W), " mm\n"])
 
 if hrt < min_req_L_and_W :
-    file_pep.writelines(["   Check: hrt = {0:0.2f}".format(hrt), " in  < {0:0.2f}".format(min_req_L_and_W), " mm   [ OK ]\n\n"])
+    file_pep.writelines(["   Check: hrt = {0:0.2f}".format(hrt), " mm  < {0:0.2f}".format(min_req_L_and_W), " mm   [ OK ]\n\n"])
 else:
-    file_pep.writelines(["   Check: hrt = {0:0.2f}".format(hrt), " in  > {0:0.2f".format(min_req_L_and_W), " mm   [ NOT OK ]\n\n"])
+    file_pep.writelines(["   Check: hrt = {0:0.2f}".format(hrt), " mm  > {0:0.2f".format(min_req_L_and_W), " mm   [ NOT OK ]\n\n"])
 
 file_pep.writelines(["5. Geometry\n"])
 file_pep.writelines(["   Confirm that the hickness of the leveling pad is adequate to prevent girder-to-support contact under anticipates girder rotations and roadway geometry. Assume rotations are about the centerline of bearing.\n"])
